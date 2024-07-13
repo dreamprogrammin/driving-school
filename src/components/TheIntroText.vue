@@ -4,16 +4,22 @@ import LinksTheme from '@/components/global/LinksTheme.vue'
 import WhatsAppIcon from '@/components/global/WhatsAppIcon.vue'
 import InstagramIcon from '@/components/global/InstagramIcon.vue'
 import TheHeaderLogo from '@/components/TheHeaderLogo.vue'
-import ButtonPhone from '@/components/global/ButtonPhone.vue'
+import TheIntroNumberPhone from '@/components/TheIntroNumberPhone.vue'
 
 const { title, text } = defineProps({ title: String, subtitle: String, text: String })
 
+const callPhone = ref(false)
+const isShowNumber = ref(false)
 const isShow = ref(true)
 const isShowButton = ref(false)
 const isOpen = ref(false)
 
 const selectOpen = () => {
   isShow.value = !isShow.value
+}
+
+const selectShow = () => {
+  isShowNumber.value = !isShowNumber.value
 }
 
 const classes = computed(() => [
@@ -61,13 +67,15 @@ const phoneNumbers = reactive([
 
 onMounted(() => {
   window.addEventListener('resize', () => {
-    if (window.innerWidth <= 448) {
+    if (window.innerWidth <= 640) {
       isShow.value = false
       isShowButton.value = true
+      isShowNumber.value = false
       console.log(window.innerWidth)
     } else {
       isShow.value = true
       isShowButton.value = false
+      isShowNumber.value = true
     }
   })
 })
@@ -83,10 +91,12 @@ onMounted(() => {
       {{ text }}
     </p>
     <h3 class="text-white font-semibold text-3xl uppercase text-center">Связаться с нами:</h3>
-    <button-phone label="Позвонить нам" v-show="isShowButton" @select-open="selectOpen" />
-    <button-phone label="Наши сети" v-show="isShowButton" @select-open="selectOpen" />
-    <div class="flex gap-10 max-w-5xl flex-wrap justify-center">
-      <div v-show="isShow" v-for="phoneNumber in phoneNumbers" :key="phoneNumber.number">
+    <the-intro-number-phone
+      :is-show-button="isShowButton"
+      @call-phone="isShowNumber = !isShowNumber"
+    />
+    <div class="flex gap-10 max-md:gap-4 max-w-5xl flex-wrap justify-center">
+      <div v-show="isShowNumber" v-for="phoneNumber in phoneNumbers" :key="phoneNumber.number">
         <links-theme :number-phone="phoneNumber.number" :is-show="isShow" />
       </div>
     </div>
