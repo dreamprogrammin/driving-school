@@ -3,9 +3,9 @@ const { label } = defineProps({ label: String })
 </script>
 
 <template>
-  <button class="text-white uppercase text-sm rounded-lg font-semibold w-24 h-12 bg-orange-500">
+  <h1 class="text-2xl uppercase text-center tracking-wider text-white font-normal">
     {{ label }}
-  </button>
+  </h1>
 </template>
 
 <style scoped></style>
