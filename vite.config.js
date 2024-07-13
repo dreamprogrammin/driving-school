@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  publicPath: `/driving-school/`,
+  base: '/driving-school',
   plugins: [vue()],
   resolve: {
     alias: {
