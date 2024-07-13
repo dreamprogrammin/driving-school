@@ -14,11 +14,7 @@ const isShow = ref(true)
 const isShowButton = ref(false)
 const isOpen = ref(false)
 
-const selectOpen = () => {
-  isShow.value = !isShow.value
-}
-
-const selectShow = () => {
+const showNumber = () => {
   isShowNumber.value = !isShowNumber.value
 }
 
@@ -66,12 +62,12 @@ const phoneNumbers = reactive([
 ])
 
 onMounted(() => {
+  showNumber()
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 640) {
       isShow.value = false
       isShowButton.value = true
       isShowNumber.value = false
-      console.log(window.innerWidth)
     } else {
       isShow.value = true
       isShowButton.value = false
@@ -91,10 +87,7 @@ onMounted(() => {
       {{ text }}
     </p>
     <h3 class="text-white font-semibold text-3xl uppercase text-center">Связаться с нами:</h3>
-    <the-intro-number-phone
-      :is-show-button="isShowButton"
-      @call-phone="isShowNumber = !isShowNumber"
-    />
+    <the-intro-number-phone :is-show-button="isShowButton" @call-phone="showNumber" />
     <div class="flex gap-10 max-md:gap-4 max-w-5xl flex-wrap justify-center">
       <div v-show="isShowNumber" v-for="phoneNumber in phoneNumbers" :key="phoneNumber.number">
         <links-theme :number-phone="phoneNumber.number" :is-show="isShow" />
