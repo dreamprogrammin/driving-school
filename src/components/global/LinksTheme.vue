@@ -5,15 +5,16 @@ const { numberPhone, isShow } = defineProps({ numberPhone: String, isShow: Boole
 const classes = computed(() => [
   'bg-orange-500',
   'rounded-md',
-  'p-4',
+  'block',
   'text-white',
-  'font-semibold'
+  'font-semibold',
+  'p-4'
 ])
 </script>
 
 <template>
   <a :class="classes" :href="`tel:${numberPhone}`">
-    <span>{{ numberPhone }}</span>
+    {{ numberPhone }}
   </a>
 </template>
 
