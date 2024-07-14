@@ -4,7 +4,7 @@ const { label } = defineProps({ label: String })
 
 <template>
   <h2
-    class="text-3xl text-white font-normal text-center max-lg:text-xl max-sm:text-sm max-md:text-xl"
+    class="text-3xl text-white font-normal text-center max-lg:text-xl max-sm:text-xl max-md:text-xl"
   >
     {{ label }}
   </h2>

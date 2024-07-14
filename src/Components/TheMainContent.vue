@@ -3,7 +3,7 @@ import ContentMain from '@/Components/global/ContentMain.vue'
 </script>
 
 <template>
-  <aside class="mt-16 max-w-6xl mx-auto px-10">
+  <aside id="about" class="mt-16 max-w-6xl mx-auto px-10">
     <content-main
       title="Обучение любой категории"
       text="У нас вы можете обучиться любой категории вождения с опытными инструкторами, готовыми поделиться своими знаниями и навыками. Независимо от того, являетесь ли вы начинающим водителем или хотите усовершенствовать свои навыки."

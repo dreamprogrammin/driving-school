@@ -5,6 +5,7 @@ import Whatsapp from '@/Components/global/Whatsapp.vue'
 import Instagram from '@/Components/global/Instagram.vue'
 import TheIntroSubtitle from '@/Components/TheIntroSubtitle.vue'
 import TheIntroText from '@/Components/TheIntroText.vue'
+import Arrow from '@/Components/global/Arrow.vue'
 
 defineEmits(['open-form'])
 </script>
@@ -23,9 +24,9 @@ defineEmits(['open-form'])
       class="w-1/2 max-md:w-10/12 flex flex-col xl:gap-12 gap-4 items-center rounded-2xl justify-around bg-opacity-60 bg-black md:p-4 p-10"
     >
       <!--      Титульный текст -->
-      <the-intro-title label="Автошкола Достык" />
+      <the-intro-title label="Автошкола Достық" />
       <!--      Подтитульный текст-->
-      <the-intro-subtitle label="Наша цель: Качественные знание" />
+      <the-intro-subtitle label="Наша цель: обеспечить вас качественным знанием" />
       <!--      Текст-->
       <the-intro-text
         label="Мы проводим обучение без ограничений по времени до получения водительского удостоверения "
@@ -36,13 +37,13 @@ defineEmits(['open-form'])
         <!--        Соцсети-->
         <div class="flex items-center gap-5 justify-center">
           <a href="https://www.instagram.com/avtoshkola.dostyk.almaty/"><instagram /></a>
-          <a
-            href="https://api.whatsapp.com/send/?phone=87476578100&text&type=phone_number&app_absent=0"
-            ><whatsapp
-          /></a>
+          <a href="https://wa.me/77476578100"><whatsapp /></a>
         </div>
       </div>
     </div>
+    <a href="#about" class="text-orange-500 animate-bounce">
+      <arrow />
+    </a>
   </main>
 </template>
 

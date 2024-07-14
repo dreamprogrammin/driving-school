@@ -1,0 +1,24 @@
+<script setup></script>
+
+<template>
+  <svg
+    class="w-16 h-16"
+    viewBox="0 0 1024.00 1024.00"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    stroke-width="36.864"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+    <g id="SVGRepo_iconCarrier">
+      <path
+        fill="currentColor"
+        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8 316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"
+      />
+    </g>
+  </svg>
+</template>
+
+<style scoped></style>

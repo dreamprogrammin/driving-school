@@ -9,9 +9,13 @@ defineEmits(['close-form'])
 const showHeader = ref(false)
 
 onMounted(() => {
-  if (window.innerHeight >= 100) {
-    setTimeout(() => (showHeader.value = true), 1000)
-  }
+  window.addEventListener('scroll', () => {
+    if (window.scrollY <= 100) {
+      showHeader.value = true
+    } else {
+      showHeader.value = false
+    }
+  })
 })
 </script>
 
@@ -29,7 +33,7 @@ onMounted(() => {
         class="max-w-4xl max-md:max-w-2xl max-lg:px-6 max-sm:max-w-2xl mx-auto flex justify-between items-center h-full"
       >
         <div class="flex">
-          <the-header-title label="Автошкола - Достык" />
+          <the-header-title label="Автошкола Достық" />
 
           <img class="w-10 h-10" src="../img/logo-icon.png" alt="logo" />
         </div>

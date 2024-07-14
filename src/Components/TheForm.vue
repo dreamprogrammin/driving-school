@@ -21,7 +21,7 @@ const phoneNumbers = reactive([
 <template>
   <div
     v-show="showForm"
-    class="fixed backdrop-blur-md bg-white/30 gap-10 top-0 translate-x-1/4 flex flex-col items-center justify-center max-sm:translate-x-0 h-dvh w-8/12 max-sm:w-full"
+    class="fixed backdrop-blur-md bg-white/45 gap-10 top-0 translate-x-1/4 flex flex-col items-center justify-center max-sm:translate-x-0 h-dvh w-8/12 max-sm:w-full"
   >
     <the-intro-title label="Связаться с нами:" />
     <div class="flex justify-center flex-wrap items-center gap-4 max-sm:gap-12">
