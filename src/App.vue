@@ -3,6 +3,8 @@ import TheHeader from '@/Components/TheHeader.vue'
 import TheIntro from '@/Components/TheIntro.vue'
 import { ref } from 'vue'
 import TheForm from '@/Components/TheForm.vue'
+import TheMainContent from '@/Components/TheMainContent.vue'
+import Footer from '@/Components/Footer.vue'
 
 const showForm = ref(false)
 
@@ -27,4 +29,8 @@ const openForm = () => {
   >
     <the-form v-show="showForm" :show-form="showForm" />
   </transition>
+  <!--  Контетная часть-->
+  <the-main-content />
+  <!--  Подвал-->
+  <Footer />
 </template>

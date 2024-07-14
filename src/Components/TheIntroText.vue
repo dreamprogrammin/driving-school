@@ -3,11 +3,11 @@ const { label } = defineProps({ label: String })
 </script>
 
 <template>
-  <h1
-    class="text-5xl text-white font-normal uppercase text-center max-lg:text-2xl max-sm:text-lg max-md:text-2xl"
+  <p
+    class="text-xl text-white font-normal mb-1.5 text-center max-lg:text-lg max-sm:text-sm max-md:text-xs"
   >
     {{ label }}
-  </h1>
+  </p>
 </template>
 
 <style scoped></style>
