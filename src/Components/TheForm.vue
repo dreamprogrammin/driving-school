@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive, watch } from 'vue'
 import LinkButton from '@/Components/global/LinkButton.vue'
 import TheIntroTitle from '@/Components/TheIntroTitle.vue'
 
