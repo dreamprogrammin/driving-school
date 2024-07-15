@@ -4,7 +4,6 @@ import Button from '@/Components/global/Button.vue'
 import Whatsapp from '@/Components/global/Whatsapp.vue'
 import Instagram from '@/Components/global/Instagram.vue'
 import TheIntroSubtitle from '@/Components/TheIntroSubtitle.vue'
-import TheIntroText from '@/Components/TheIntroText.vue'
 import Arrow from '@/Components/global/Arrow.vue'
 
 defineEmits(['open-form'])
@@ -26,11 +25,11 @@ defineEmits(['open-form'])
       <!--      Титульный текст -->
       <the-intro-title label="Автошкола Достық" />
       <!--      Подтитульный текст-->
-      <the-intro-subtitle label="Наша цель: обеспечить вас качественным знанием" />
-      <!--      Текст-->
-      <the-intro-text
-        label="Мы проводим обучение без ограничений по времени до получения водительского удостоверения "
+      <the-intro-subtitle
+        label="Наша цель: обеспечить вас качественным знанием ПДД РК
+Мы проводим обучением без ограничений по времени до получения водительского удостоверения и обучаем дополнительно компьютерной грамотности."
       />
+
       <!--      Кнопка записаться-->
       <div class="flex items-center justify-center flex-col gap-5">
         <Button @click="$emit('open-form')">Записаться</Button>

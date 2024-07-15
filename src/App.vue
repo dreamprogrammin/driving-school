@@ -1,21 +1,41 @@
 <script setup>
 import TheHeader from '@/Components/TheHeader.vue'
 import TheIntro from '@/Components/TheIntro.vue'
-import { ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import TheForm from '@/Components/TheForm.vue'
 import TheMainContent from '@/Components/TheMainContent.vue'
 import Footer from '@/Components/Footer.vue'
 
+const showHeader = ref(false)
 const showForm = ref(false)
 
 const openForm = () => {
   showForm.value = !showForm.value
+  showHeader.value = true
 }
+
+watch(showForm, (newValue) => {
+  if (newValue) {
+    document.querySelector('body').style.overflow = 'hidden'
+  } else {
+    document.querySelector('body').style.overflow = 'auto'
+  }
+})
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      showHeader.value = true
+    } else {
+      showHeader.value = false
+    }
+  })
+})
 </script>
 
 <template>
   <!--  Шапка сайта-->
-  <the-header @close-form="showForm = !showForm" :show-form="showForm" />
+  <the-header @close-form="showForm = !showForm" :show-header="showHeader" :show-form="showForm" />
   <!--  Интро сайта-->
   <the-intro @open-form="openForm" />
   <!--  Форма сайта-->

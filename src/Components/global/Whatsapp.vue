@@ -5,7 +5,7 @@
     xmlns="http://www.w3.org/2000/svg"
     aria-label="WhatsApp"
     role="img"
-    class="h-10 w-10 max-md:h-5 max-md:w-5"
+    class="h-10 w-10"
     viewBox="0 0 512 512"
   >
     <rect width="512" height="512" rx="15%" fill="#25d366" />

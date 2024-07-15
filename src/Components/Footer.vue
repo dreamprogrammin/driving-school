@@ -2,8 +2,8 @@
 
 <template>
   <footer class="bg-[#3f3f46]">
-    <div class="flex justify-between mx-auto w-10/12">
-      <div class="w-8/12 mx-auto flex gap-2 items-center h-20 justify-start">
+    <div class="flex px-10 justify-between mx-auto max-w-6xl">
+      <div class="flex gap-2 items-center h-20 justify-start">
         <h3 class="text-xl mt-1 text-orange-500 self-start items-start uppercase font-light">
           Сайт разработан:
         </h3>
