@@ -2,6 +2,8 @@
 import { reactive } from 'vue'
 import LinkButton from '@/Components/global/LinkButton.vue'
 import TheIntroTitle from '@/Components/TheIntroTitle.vue'
+import TheIntroSubtitle from '@/Components/TheIntroSubtitle.vue'
+import TheIntroText from '@/Components/TheIntroText.vue'
 
 const showForm = defineProps({ showForm: Boolean })
 
@@ -29,6 +31,12 @@ const phoneNumbers = reactive([
         <link-button :label="phoneNumber.number" />
       </div>
     </div>
+    <the-intro-subtitle label="Наш адресс" />
+    <the-intro-text
+      label="проспект Достык 110;
+мкр Думан-2 дом-28;
+ул.Шотаманулы 16;"
+    />
   </div>
 </template>
 

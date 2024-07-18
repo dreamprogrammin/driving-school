@@ -5,7 +5,7 @@ const { title, text } = defineProps({ title: String, text: String })
 <template>
   <h1
     v-scrollanimation
-    class="text-white max-w-sm font-semibold tracking-wide max-lg:text-2xl max-2xl:text-4xl"
+    class="text-white max-w-sm z-30 font-semibold tracking-wide max-lg:text-2xl max-2xl:text-4xl"
   >
     {{ title }}
   </h1>

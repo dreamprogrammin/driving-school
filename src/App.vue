@@ -5,13 +5,20 @@ import { onMounted, ref, watch } from 'vue'
 import TheForm from '@/Components/TheForm.vue'
 import TheMainContent from '@/Components/TheMainContent.vue'
 import Footer from '@/Components/Footer.vue'
+import GiftCard from '@/Components/global/GiftCard.vue'
+import GiftCardOpen from '@/Components/global/GiftCardOpen.vue'
 
 const showHeader = ref(false)
 const showForm = ref(false)
+const isShowGift = ref(false)
 
 const openForm = () => {
   showForm.value = !showForm.value
   showHeader.value = true
+}
+
+const showGift = () => {
+  isShowGift.value = !isShowGift.value
 }
 
 watch(showForm, (newValue) => {
@@ -29,6 +36,9 @@ onMounted(() => {
     } else {
       showHeader.value = false
     }
+    if (window.scrollY >= 10) {
+      isShowGift.value = false
+    }
   })
 })
 </script>
@@ -37,6 +47,7 @@ onMounted(() => {
   <!--  Шапка сайта-->
   <the-header @close-form="showForm = !showForm" :show-header="showHeader" :show-form="showForm" />
   <!--  Интро сайта-->
+
   <the-intro @open-form="openForm" />
   <!--  Форма сайта-->
   <transition
@@ -53,4 +64,6 @@ onMounted(() => {
   <the-main-content />
   <!--  Подвал-->
   <Footer />
+  <gift-card :is-show-gift="isShowGift" @show-gift="showGift" />
+  <gift-card-open @show-gift="showGift" />
 </template>

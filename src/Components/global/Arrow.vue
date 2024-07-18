@@ -2,7 +2,7 @@
 
 <template>
   <svg
-    class="w-16 h-16"
+    :class="$attrs.class || 'w-16 h-16'"
     viewBox="0 0 1024.00 1024.00"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
