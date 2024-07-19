@@ -1,12 +1,12 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import LinkButton from '@/Components/global/LinkButton.vue'
 import TheIntroTitle from '@/Components/TheIntroTitle.vue'
 import TheIntroSubtitle from '@/Components/TheIntroSubtitle.vue'
 import TheIntroText from '@/Components/TheIntroText.vue'
 
-const showForm = defineProps({ showForm: Boolean })
-
+const isFormText = ref(true)
+const { showForm } = defineProps({ showForm: Boolean, isFormText: Boolean })
 const phoneNumbers = reactive([
   {
     number: '+77025379473'
@@ -33,6 +33,7 @@ const phoneNumbers = reactive([
     </div>
     <the-intro-subtitle label="Наш адресс" />
     <the-intro-text
+      :is-form-text="isFormText"
       label="проспект Достык 110;
 мкр Думан-2 дом-28;
 ул.Шотаманулы 16;"

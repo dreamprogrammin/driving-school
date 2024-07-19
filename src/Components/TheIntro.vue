@@ -5,6 +5,7 @@ import Whatsapp from '@/Components/global/Whatsapp.vue'
 import Instagram from '@/Components/global/Instagram.vue'
 import TheIntroSubtitle from '@/Components/TheIntroSubtitle.vue'
 import Arrow from '@/Components/global/Arrow.vue'
+import TheIntroText from '@/Components/TheIntroText.vue'
 
 defineEmits(['open-form'])
 </script>
@@ -23,12 +24,14 @@ defineEmits(['open-form'])
       class="w-1/2 max-md:w-10/12 flex flex-col xl:gap-12 gap-4 items-center rounded-2xl justify-around bg-opacity-60 bg-black md:p-4 p-10"
     >
       <!--      Титульный текст -->
-      <the-intro-title label="Автошкола Достық" />
+      <the-intro-title label="Автошкола Достык" />
       <!--      Подтитульный текст-->
+      <the-intro-text label="Наша цель: обеспечить вас качественным знанием ПДД РК" />
       <the-intro-subtitle
-        label="Наша цель: обеспечить вас качественным знанием ПДД РК
+        label="
 Мы проводим обучением без ограничений по времени до получения водительского удостоверения и обучаем дополнительно компьютерной грамотности."
       />
+      <the-intro-text label="" />
 
       <!--      Кнопка записаться-->
       <div class="flex items-center justify-center flex-col gap-5">

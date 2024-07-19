@@ -20,7 +20,7 @@ const classes = computed(() => ['w-6', 'h-6', isShowGift ? '-rotate-90' : 'rotat
         href="https://wa.me/77476578100"
         class="w-52 text-orange-500 flex flex-col justify-center backdrop-blur-md bg-black/30 tracking-wide text-xl uppercase font-medium text-center py-3 px-10"
       >
-        Подарочный Сертификат
+        Заказать подрачоный сертифакат
       </a>
       <button
         @click="$emit('show-gift')"

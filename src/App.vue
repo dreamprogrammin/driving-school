@@ -30,6 +30,12 @@ watch(showForm, (newValue) => {
 })
 
 onMounted(() => {
+  setTimeout(() => (isShowGift.value = true), 500)
+  setTimeout(() => {
+    if (isShowGift.value) {
+      isShowGift.value = false
+    }
+  }, 2500)
   window.addEventListener('scroll', () => {
     if (window.scrollY === 0) {
       showHeader.value = true

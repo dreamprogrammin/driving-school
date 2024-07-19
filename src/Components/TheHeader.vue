@@ -1,21 +1,10 @@
 <script setup>
 import TheHeaderTitle from '@/Components/TheHeaderTitle.vue'
-import { onMounted, ref } from 'vue'
+
 import Close from '@/Components/global/Close.vue'
 
 const { showForm } = defineProps({ showForm: Boolean, showHeader: Boolean })
-// const showHeader = ref(false)
 defineEmits(['close-form'])
-
-// onMounted(() => {
-//   window.addEventListener('scroll', () => {
-//     if (window.scrollY === 0) {
-//       showHeader.value = true
-//     } else {
-//       showHeader.value = false
-//     }
-//   })
-// })
 </script>
 
 <template>
